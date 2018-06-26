@@ -1,0 +1,9 @@
+/* Map CSS*/
+
+#map{
+    width:100%;
+}
+
+.leaflet-container{
+    height:40em;
+}

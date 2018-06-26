@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load leaflet_tags %}
+{% load static %}
+
+
+{% block title %}
+    Index
+{% endblock title %}
+
+
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'assets/leaflet-markercluster/css/MarkerCluster.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/leaflet-markercluster/css/MarkerCluster.Default.css' %}" />
+
+    {% leaflet_css %}
+    {% leaflet_js %}
+
+
+
+    {% leaflet_map "map" callback="map_init" %}
+
+    <script src="{% static 'assets/js/prefectureTogo.js' %}"></script>
+    <script src="{% static 'assets/leaflet-ajax/js/leaflet.ajax.js' %}"></script>
+    <script src="{% static 'assets/leaflet-markercluster/js/leaflet.markercluster.js' %}"></script>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+
+{% endblock content %}
