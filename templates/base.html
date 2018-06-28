@@ -15,14 +15,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	</head>
-	<body class="is-preload">
-		<!-- Main -->
-		<div id="main">
+	<body >
+		<div class="container">
+			<!--Menu-->
 
-			{% block content %}
+			<div>
+				Hello
+			</div>
+			<!-- Main -->
+			<div id="main">
 
-			{% endblock content %}
+				{% block content %}
 
+				{% endblock content %}
+
+			</div>
 		</div>
 
 		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
