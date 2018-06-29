@@ -5,13 +5,12 @@
 }
 
 .leaflet-container{
-    height:58em;
+    height:50em;
 }
 
 /* Main content */
 
 .main{
-    margin-top:70px;
 }
 
 
@@ -22,7 +21,7 @@
 }
 
 .menuNav{
-    margin-leff:100px;
+    margin-left:100px;
 }
 
 /* Body */
