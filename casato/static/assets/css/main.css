@@ -5,17 +5,30 @@
 }
 
 .leaflet-container{
-    height:45em;
+    height:53em;
 }
 
 /* Main content */
 
 .main{
-
+    margin-top:70px;
+    margin-bottom:70px;
 }
 
 
 /* Menu */
 
 .menu{
+    padding:1px;
+}
+
+.menuNav{
+    margin-leff:100px;
+}
+
+/* Body */
+
+body{
+    background-color: #f8f8f8;
+    color:#e7e7e7;
 }
