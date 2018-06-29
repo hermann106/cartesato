@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
 {% load static %}
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>
@@ -13,26 +8,134 @@
 		</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	</head>
 	<body >
-		<div class="container">
-			<!--Menu-->
+		<div class="container-fluid">
 
-			<div>
-				Hello
+			<div class="">
+				<!--Top Menu-->
+				<nav class="navbar navbar-default">
+
+					<div class="container-fluid">
+
+						<div class="navbar-header">
+
+							<button type="button" class="navbar-toggle collapsed"
+									data-toggle="collapse"
+									data-target="#menuToggler"
+									aria-expanded="false">
+								<span class="sr-only"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<a class="navbar-brand" href="#">CarteSato</a>
+
+						</div>
+
+						<div class="collapse navbar-collapse" id="menuToggler">
+
+							<ul class="nav navbar-nav">
+
+								<li class="">
+									<a href="#">A Propos</a>
+								</li>
+								<li>
+									<a href="#">Sigles et Acronymes</a>
+								</li>
+								<li>
+									<a href="#">Contacte</a>
+								</li>
+
+							</ul>
+
+							<form class="navbar-form navbar-right">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search">
+								</div>
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+
+						</div>
+
+					</div>
+				</nav>
+				<!--Top Menu-->
 			</div>
-			<!-- Main -->
-			<div id="main">
 
-				{% block content %}
+			<div class="">
+				<!-- Main -->
+				<div class="main">
 
-				{% endblock content %}
+					{% block content %}
 
+					{% endblock content %}
+
+				</div>
+				<!-- Main -->
 			</div>
+
+			<div class="">
+				<!--Top Menu-->
+				<nav class="navbar navbar-default">
+
+					<div class="container-fluid">
+
+						<div class="navbar-header">
+
+							<button type="button" class="navbar-toggle collapsed"
+									data-toggle="collapse"
+									data-target="#BottomMenuToggler"
+									aria-expanded="false">
+								<span class="sr-only"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<a class="navbar-brand" href="#">CarteSato</a>
+
+						</div>
+
+						<div class="collapse navbar-collapse" id="bottomMenuToggler">
+
+							<ul class="nav navbar-nav">
+
+								<li class="">
+									<a href="#">A Propos</a>
+								</li>
+								<li>
+									<a href="#">Sigles et Acronymes</a>
+								</li>
+								<li>
+									<a href="#">Contacte</a>
+								</li>
+
+							</ul>
+
+							<form class="navbar-form navbar-right">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search">
+								</div>
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+
+						</div>
+
+					</div>
+				</nav>
+				<!--Top Menu-->
+			</div>
+
 		</div>
 
 		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/popper.min.js' %}"></script>
+		<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 
 	</body>
 </html>
