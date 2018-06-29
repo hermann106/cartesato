@@ -25,7 +25,7 @@ SECRET_KEY = '#w6qu8estji@$(a0p-d@c@08kp5)7us8jx_rgc#58lmlqgpu35'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -161,4 +161,5 @@ LEAFLET_CONFIG = {
     'DEFAULT_ZOOM': 7,
     'MIN_ZOOM': 7,
     'MAX_ZOOM': 18,
+    "RESET_VIEW":False,
 }

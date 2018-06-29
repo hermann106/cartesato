@@ -5,17 +5,75 @@
 }
 
 .leaflet-container{
-    height:45em;
+    height:58em;
 }
 
 /* Main content */
 
 .main{
-
+    margin-top:70px;
 }
 
 
 /* Menu */
 
 .menu{
+    padding:1px;
 }
+
+.menuNav{
+    margin-leff:100px;
+}
+
+/* Body */
+
+body{
+    background-color: #f8f8f8;
+    color:#e7e7e7;
+}
+
+
+/* For different devices */
+
+@media only screen and (max-height: 580px) {
+    .leaflet-container{
+        height:27em;
+    }
+}
+
+@media only screen and (min-height: 600px) {
+    .leaflet-container{
+        height:50em;
+    }
+}
+
+@media only screen and (min-height: 736px) {
+    .leaflet-container{
+        height:55em;
+    }
+}
+
+@media only screen and (min-height: 640px) {
+    .leaflet-container{
+        height:47em;
+    }
+}
+
+@media only screen and (min-height: 568px) {
+    .leaflet-container{
+        height:41em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .leaflet-container{
+        height:58em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .leaflet-container{
+        height:58em;
+    }
+}
+
