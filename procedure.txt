@@ -1,0 +1,61 @@
+PROCEDURE DE DEPLOIEMENT DE LA PLATEFORME CARTESATO
+1-/ Préréquis
+Python3.6 utilisé pour cette plateforme
+Django1.11
+
+2-/Installer Postresql :
+$ sudo apt-get update
+$ sudo apt-get install postgresql postgresql-devel postgresql-server python-psycopg2
+
+3-/Installer les librairies geospatial :
+$ sudo apt-get install gdal-bin
+
+4-/Installer PostGIS :
+$ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+$ sudo apt-get update
+$ sudo apt-get install postgis
+
+5-/Se connecter à postgresql :
+$ sudo -u postgres psql
+
+6-/Créer la base de données : 
+postgres=# CREATE DATABASE geodjango;
+7-/Créer l'utilisateur kalamar et lui attribuer son mot de passe
+CREATE USER kalamar WITH PASSWORD 'totototo';
+
+8-/Attribuer des Roles :
+ALTER ROLE kalamar SET client_encoding TO 'utf8';
+ALTER ROLE kalamar SET default_transaction_isolation TO 'read committed';
+>CREATE EXTENSION postgis;
+
+9-/Ouvrir le fichier de configuration pour modifier les valeurs de 'peer' en 'md5' aux endroits stipulés
+$ gedit /etc/postgresql/9.5/main/pg_hba.conf
+
+    # "local" is for Unix domain socket connections only
+    local   all         all                               md5
+    # IPv4 local connections:
+    host    all         all         127.0.0.1/32          md5
+    # IPv6 local connections:
+    host    all         all         ::1/128               md5
+
+10-/Redemarrer la base de données postgresql
+$ sudo service postgresql restart
+# Verifier et quitter le terminal
+$psql geodjango -U kalamar
+>\q
+
+11-/Installer le server redis
+$ sudo apt-get install redis-server
+
+12-/Ouvrir le shell
+$python manage.py shell
+>>from structure import load
+>>load.run()
+>>from canton import load
+>>load.run()
+
+13-/Quitter la ligne de commande
+>>Ctrl-Z
+
+14-/Démarrer le serveur python
+$python manage.py runserver
