@@ -35,13 +35,7 @@ body{
 
 /* For different devices */
 
-@media only screen and (max-height: 580px) {
-    .leaflet-container{
-        height:27em;
-    }
-}
-
-@media only screen and (min-height: 600px) {
+@media only screen and (max-height: 667px) {
     .leaflet-container{
         height:50em;
     }

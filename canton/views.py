@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.core.serializers import serialize
 from django.http import HttpResponse
 from .models import *
+from django.views.decorators.cache import cache_page
 
 from django.core.cache import cache
 # Create your views here.
 
-
+@cache_page(60)
 def cantons(request):
     redis_key = "cantons"
     cantons_as_geojson = cache.get(redis_key)
