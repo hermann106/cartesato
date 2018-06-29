@@ -161,4 +161,5 @@ LEAFLET_CONFIG = {
     'DEFAULT_ZOOM': 7,
     'MIN_ZOOM': 7,
     'MAX_ZOOM': 18,
+    "RESET_VIEW":False,
 }
