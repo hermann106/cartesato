@@ -20,6 +20,10 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
+    url(r'^contact$', views.contact),
     url(r'canton/', include("canton.urls")),
+    url(r'search/', include("search.urls")),
     url(r'structures/', include("structures.urls")),
+    url(r'^pages/', include('django.contrib.flatpages.urls')),
+
 ]
