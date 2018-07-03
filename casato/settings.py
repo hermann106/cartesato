@@ -61,12 +61,12 @@ MIDDLEWARE = [
 
 CACHES = {
     'default': {
-        'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': '127.0.0.1:6379',
+        #'BACKEND': 'redis_cache.RedisCache',
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        #'LOCATION': '127.0.0.1:6379',
     },
 }
 
-CACHE_TTL = 60 * 15
 
 ROOT_URLCONF = 'casato.urls'
 
