@@ -1,0 +1,22 @@
+{% extends '../base.html' %}
+
+{% load leaflet_tags %}
+{% load static %}
+
+
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-9" style="color:black">
+            {{ flatpage.content }}
+
+    </div>
+</div>
+
+
+{% endblock content %}
