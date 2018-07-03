@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'search/', include("search.urls")),
     url(r'structures/', include("structures.urls")),
     url(r'^pages/', include('django.contrib.flatpages.urls')),
+    url(r'^recherche/', include('haystack.urls')),
 ]

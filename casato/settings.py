@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'django.contrib.gis',
+    'haystack',
     'structures',
     'leaflet',
     'canton',
@@ -63,6 +64,16 @@ MIDDLEWARE = [
     # ... rest of middlewares
     'django.middleware.cache.FetchFromCacheMiddleware',
 ]
+
+HAYSTACK_CONNECTIONS = {
+              'default': {
+                    'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+                    'URL': 'http://127.0.0.1:9200/',
+                    'INDEX_NAME': 'haystack_books',
+              },
+    }
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 CACHES = {
     'default': {
