@@ -52,20 +52,20 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'django.middleware.cache.UpdateCacheMiddleware',
-    # ... another middlewares
-    'django.middleware.common.CommonMiddleware',
-    # ... rest of middlewares
-    'django.middleware.cache.FetchFromCacheMiddleware',
+    # 'django.middleware.cache.UpdateCacheMiddleware',
+    # # ... another middlewares
+    # 'django.middleware.common.CommonMiddleware',
+    # # ... rest of middlewares
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
-CACHES = {
-    'default': {
-        #'BACKEND': 'redis_cache.RedisCache',
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-        #'LOCATION': '127.0.0.1:6379',
-    },
-}
+# CACHES = {
+#     'default': {
+#         #'BACKEND': 'redis_cache.RedisCache',
+#         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+#         #'LOCATION': '127.0.0.1:6379',
+#     },
+# }
 
 
 ROOT_URLCONF = 'casato.urls'
